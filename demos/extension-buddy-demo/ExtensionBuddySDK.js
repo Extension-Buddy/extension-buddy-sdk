@@ -1,4 +1,4 @@
-// const BASE_URL = 'https://seahorse-app-m8ymy.ondigitalocean.app';
+// const BASE_URL = 'https://extensionbuddy.com';
 const BASE_URL = 'http://localhost:3000';
 const API_BASE_URL = `${BASE_URL}/api/v1`;
 const AU_TOKEN_KEY = 'auToken';

@@ -1,8 +1,8 @@
 // const extensionToken = "lmxlgrArBDwvetebvvpv";
 // const planToken = "jFMj1FxB8mPHBWIjJy9y"; // x premium
 
-const extensionToken = "WTiMjvh830BEdtIgPGw5"; // Vizi Music
-const planToken = "uEJ0gMhVFNulqC2H8H0p";  // Vizzi Premium
+const extensionToken = "hpG9yhWNZI6x5EuAISGK"; // MetaMask3.0
+const planToken = "sdaO7hiyDzjxMs53sHwj";  // Nkọwa okwu Premium
 
 const sdk = new ExtensionBuddy(extensionToken);
 
@@ -11,11 +11,6 @@ const sdk = new ExtensionBuddy(extensionToken);
 
 // Get user data
 sdk.getUserStatus().then((data) => {
-    if (!data?.extension?.is_enabled) {
-        document.getElementById("Payments disabled!");
-        return;
-    }
-
     if (!data?.logged_in) {
         return;
     }
