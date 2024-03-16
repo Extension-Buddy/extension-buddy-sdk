@@ -1,5 +1,4 @@
-// const BASE_URL = 'https://extensionbuddy.com';
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://staging.extensionbuddy.com';
 const API_BASE_URL = `${BASE_URL}/api/v1`;
 const AU_TOKEN_KEY = 'auToken';
 const USER_STATUS_KEY = 'userStatus';
@@ -56,9 +55,12 @@ async function getAuToken() {
       method: 'GET',
     });
 
+    if (!response.ok) {
+      throw new Error('Extension Buddy could not get an AuToken');
+    }
+
     const data = await response.json();
 
-    //TODO: catch errors
     auToken = data?.data?.au_token;
 
     await setInLocalStorage(AU_TOKEN_KEY, auToken, 999_999_999_999);
@@ -87,6 +89,11 @@ class ExtensionBuddy {
     const response = await fetch(`${this.API_URL}/user_status?au_token=${auToken}`, {
       method: 'GET',
     });
+
+    if (!response.ok) {
+      throw new Error('Extension Buddy could not get the user status');
+    }
+
     const data = await response.json();
 
     if (data?.data?.user?.email !== null) {

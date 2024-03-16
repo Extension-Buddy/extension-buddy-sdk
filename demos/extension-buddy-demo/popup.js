@@ -1,8 +1,5 @@
-// const extensionToken = "lmxlgrArBDwvetebvvpv";
-// const planToken = "jFMj1FxB8mPHBWIjJy9y"; // x premium
-
-const extensionToken = "hpG9yhWNZI6x5EuAISGK"; // MetaMask3.0
-const planToken = "sdaO7hiyDzjxMs53sHwj";  // Nkọwa okwu Premium
+const extensionToken = "cgWFjYzLrXcIYhYlscFn"; // API Extender
+const planToken = "VrSGP7WCWct5jXdKkQnh";  // Gold Plan
 
 const sdk = new ExtensionBuddy(extensionToken);
 
