@@ -1,0 +1,22 @@
+{
+  "name": "extension-buddy-sdk",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://extensionbuddy.com/documenation",
+  "repository": {
+    "url": "c"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "author": "ExtensionBuddy LLC",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.269",
+    "tsup": "^8.2.2",
+    "typescript": "^5.5.4"
+  }
+}
