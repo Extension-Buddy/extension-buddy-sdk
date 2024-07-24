@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "https://extensionbuddy.com/documenation",
   "repository": {
-    "url": "c"
+    "url": "https://github.com/Extension-Buddy/extension-buddy-sdk"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
