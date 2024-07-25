@@ -1,6 +1,6 @@
 import { API_BASE_URL, AU_TOKEN_KEY } from "./constants";
 
-export const getFromLocalStorage = async (key: string) => {
+export const getFromLocalStorage = async (key: string): Promise<any> => {
   return new Promise((resolve, _) => {
     chrome.storage.local.get(key, async (data) => {
       const storedData = data[key];
@@ -43,7 +43,7 @@ export const removeFromLocalStorage = async (key: string) => {
   });
 }
 
-export const getAuToken = async () => {
+export const getAuToken = async (): Promise<string> => {
   let auToken = await getFromLocalStorage(AU_TOKEN_KEY);
 
   if (auToken === null) {
@@ -59,9 +59,7 @@ export const getAuToken = async () => {
 
     auToken = data?.data?.au_token;
 
-    if (auToken) {
-      await setInLocalStorage(AU_TOKEN_KEY, auToken as string, 999_999_999_999);
-    }
+    await setInLocalStorage(AU_TOKEN_KEY, auToken as string, 999_999_999_999);
   }
 
   return auToken;

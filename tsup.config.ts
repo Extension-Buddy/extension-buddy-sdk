@@ -7,4 +7,7 @@ export default defineConfig({
     shims: true,
     skipNodeModulesBundle: true,
     clean: true,
+    esbuildOptions(options) {
+      options.drop = ['console'];
+    },
 });

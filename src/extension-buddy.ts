@@ -14,7 +14,7 @@ export class ExtensionBuddy {
       this.extensionToken = extensionToken;
   }
 
-  async getUserStatus() {
+  async getUserStatus(): Promise< Record<string, any>> {
     const auToken = await getAuToken();
 
     let hash = await getFromLocalStorage(USER_STATUS_KEY);
@@ -45,16 +45,14 @@ export class ExtensionBuddy {
     return data.data;
   }
 
-  async getPlanStatus({ planKey } : GetPlanStatusProps) {
-    if (!planKey) return undefined;
-
+  async getPlanStatus({ planKey } : GetPlanStatusProps): Promise< Record<string, any>> {
     const userStatus = await this.getUserStatus();
     const plans = userStatus?.plans || {};
 
     return plans[planKey];
   }
 
-  async isExtensionEnabled() {
+  async isExtensionEnabled(): Promise<boolean> {
     const userStatus = await this.getUserStatus();
     return userStatus?.extension?.is_enabled || false;
   }
