@@ -34,7 +34,6 @@ test:
 	@echo 'Running tests...'
 	npm run test
 	@echo 'Tests completed.'
-
 release: test build check-changes
 	@echo "Release steps completed."
 define HELP_MESSAGE
