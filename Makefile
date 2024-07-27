@@ -1,7 +1,7 @@
 #######################################
 # Build command for Extension Buddy SDK
 #######################################
-.PHONY: help build check-changes release
+.PHONY: help test build release
 
 help:
 	$(info ${HELP_MESSAGE})
@@ -35,11 +35,16 @@ check-changes:
 		exit 1; \
 	fi
 
-release: check-changes
-	@# Run the npm release command
+test:
+	@echo 'Running tests...'
 	npm run test
+	@echo 'Tests completed.'
+
+release: test build check-changes
+	@echo "Release steps completed."
 define HELP_MESSAGE
 	--- Run this command to build the sdk ---
 	$ make build
 	$ make release
+	$ make test
 endef
