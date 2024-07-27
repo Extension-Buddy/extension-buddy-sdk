@@ -18,20 +18,16 @@ build:
 	@rm dist/extension-buddy-sdk.js.bak
 	@exit 0
 check-changes:
-	@# Check for uncommitted changes
 	@if ! git diff --quiet; then \
-		echo "There are uncommitted changes. Please commit them before proceeding."; \
+		echo "Error: There are modified files."; \
 		exit 1; \
 	fi
-	@# Check for staged changes
 	@if ! git diff --cached --quiet; then \
-		echo "There are staged changes. Please commit them before proceeding."; \
+		echo "Error: There are unadded files."; \
 		exit 1; \
 	fi
-	@# Check if the branch is up-to-date with the remote
-	@git fetch
-	@if ! git diff --quiet HEAD origin/$(git rev-parse --abbrev-ref HEAD); then \
-		echo "Your branch is not up-to-date with the remote. Please push or pull the latest changes."; \
+	@if ! git diff --quiet origin/$(shell git rev-parse --abbrev-ref HEAD); then \
+		echo "Error: There are unpushed commits."; \
 		exit 1; \
 	fi
 test:
