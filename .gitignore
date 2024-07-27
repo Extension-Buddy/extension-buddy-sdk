@@ -1,4 +1,5 @@
-/dist
+/dist/*
+!/dist/extension-buddy-sdk.js
 /demos
 /node_modules
 
