@@ -11,7 +11,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "make build",
-    "tsup": "tsup"
+    "tsup": "tsup",
+    "test": "echo 'tested'"
   },
   "author": "ExtensionBuddy LLC",
   "license": "MIT",

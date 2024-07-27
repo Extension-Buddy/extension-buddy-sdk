@@ -1,7 +1,7 @@
 #######################################
 # Build command for Extension Buddy SDK
 #######################################
-.PHONY: help build
+.PHONY: help build check-changes release
 
 help:
 	$(info ${HELP_MESSAGE})
@@ -17,7 +17,29 @@ build:
 	@sed -i.bak '/export {/,/};/d' dist/extension-buddy-sdk.js
 	@rm dist/extension-buddy-sdk.js.bak
 	@exit 0
+check-changes:
+	@# Check for unadded or uncommitted changes
+	@if ! git diff-index --quiet HEAD --; then \
+		echo "There are uncommitted changes. Please commit them before proceeding."; \
+		exit 1; \
+	fi
+	@# Check for untracked files
+	@if ! git diff --cached --exit-code > /dev/null; then \
+		echo "There are staged changes. Please commit them before proceeding."; \
+		exit 1; \
+	fi
+	@# Check if the branch is up-to-date with the remote
+	@git fetch
+	@if ! git diff --quiet HEAD origin/`git rev-parse --abbrev-ref HEAD`; then \
+		echo "Your branch is not up-to-date with the remote. Please push or pull the latest changes."; \
+		exit 1; \
+	fi
+
+release: check-changes
+	@# Run the npm release command
+	npm run test
 define HELP_MESSAGE
 	--- Run this command to build the sdk ---
 	$ make build
+	$ make release
 endef
