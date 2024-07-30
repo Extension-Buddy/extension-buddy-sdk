@@ -16,6 +16,8 @@
 
 Sign up for [Extension Buddy](https://extensionbuddy.com/signup) (Monetize) to get started!
 
+Learn more by going to https://extensionbuddy.com
+
 <hr style="height: 5px; background-color: #2C5282">
 
 ## 1. Adding the SDK
