@@ -35,6 +35,7 @@ test:
 	npm run test
 	@echo 'Tests completed.'
 release: test build check-changes
+	npm publish
 	@echo "Release steps completed."
 define HELP_MESSAGE
 	--- Run this command to build the sdk ---
