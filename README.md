@@ -42,4 +42,6 @@ Now that you have connected the Extension Buddy SDK client, it's time to get sta
 
 ## License
 
+NOT AVAILIBLE FOR REUSE. PRIVATE. DO NOT COPY OR SELL CODE.
+
 <hr style="height: 10px; background-color: #2C5282">
