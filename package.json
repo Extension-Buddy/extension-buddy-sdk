@@ -34,7 +34,7 @@
     "test": "echo 'tested'",
     "release": "make release"
   },
-  "author": "ExtensionBuddy LLC",
+  "author": "ExtensionBuddy, LLC",
   "license": "LGPL-3.0",
   "devDependencies": {
     "@types/chrome": "^0.0.269",
