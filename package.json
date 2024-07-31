@@ -1,11 +1,30 @@
 {
   "name": "extension-buddy-sdk",
   "version": "0.0.1",
-  "description": "",
+  "description": "Extension Buddy is an all-in-one developer platform to build, manage, and monetize your browser extensions. Extension Buddy Monetize allows you to earn money selling your browser extensions, transforming your innovative ideas into a profitable business",
   "homepage": "https://extensionbuddy.com/docs/",
   "repository": {
     "url": "https://github.com/Extension-Buddy/extension-buddy-sdk"
   },
+  "keywords": [
+    "browser",
+    "extensions",
+    "plugins",
+    "add-ons",
+    "subscription",
+    "billing",
+    "payment",
+    "fees",
+    "gated access",
+    "licencing",
+    "sdk",
+    "chrome",
+    "firefox",
+    "analytics",
+    "developer",
+    "monetize",
+    "platform"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

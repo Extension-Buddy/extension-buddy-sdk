@@ -6,7 +6,7 @@
 <hr style="height: 10px; background-color: #2C5282">
 
 ## About
-[Extension Buddy](https://extensionbuddy.com) is an all-in-one developer plaform to build, manage and monetize your browser extensions. [Extension Buddy Monetize](https://extensionbuddy.com/monetize)  allows you to earn money selling your browser extensions, transforming your innovative ideas into a profitable business. With this SDK, you can: 
+[Extension Buddy](https://extensionbuddy.com) is an all-in-one developer platform to build, manage, and monetize your browser extensions. [Extension Buddy Monetize](https://extensionbuddy.com/monetize)  allows you to earn money selling your browser extensions, transforming your innovative ideas into a profitable business. With this SDK, you can: 
 
 - Charge a one-time fee, or offer monthly or annual subscriptions for access to your browser extension.
 - Easily access user and subscription plan statuses.
