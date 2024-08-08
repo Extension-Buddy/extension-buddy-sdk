@@ -1,6 +1,5 @@
 /src
 /node_modules
-/dist/extension-buddy-sdk.js
 
 .env
 .DS_Store

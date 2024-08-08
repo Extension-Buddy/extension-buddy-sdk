@@ -1,3 +1,4 @@
+/* global chrome */
 // src/constants.ts
 var BASE_URL = "https://extensionbuddy.com";
 var API_BASE_URL = `${BASE_URL}/api/v1`;

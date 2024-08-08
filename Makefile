@@ -16,6 +16,7 @@ build:
 	@cp dist/index.mjs dist/extension-buddy-sdk.js
 	@sed -i.bak '/export {/,/};/d' dist/extension-buddy-sdk.js
 	@rm dist/extension-buddy-sdk.js.bak
+	@echo '/* global chrome */' | cat - dist/extension-buddy-sdk.js > temp && mv temp dist/extension-buddy-sdk.js
 	@exit 0
 check-changes:
 	@if ! git diff --quiet; then \
